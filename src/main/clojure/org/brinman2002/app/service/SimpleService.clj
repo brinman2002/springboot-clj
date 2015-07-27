@@ -3,8 +3,8 @@
 
 (gen-class
   :name ^{RestController {} 
-          RequestMapping {:value "simple"} } org.brinman2002.app.service.SimpleService 
-  :methods [[^{RequestMapping {:method (into-array RequestMethod #{RequestMethod/GET})}} greet [] java.lang.String ]])
+          RequestMapping {:value ["simple"]} } org.brinman2002.app.service.SimpleService 
+  :methods [[^{RequestMapping {:method [RequestMethod/GET]}} greet [] java.lang.String ]])
 
 (defn -greet
   [ x]
