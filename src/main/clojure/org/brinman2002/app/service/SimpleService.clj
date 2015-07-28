@@ -9,11 +9,11 @@
 
 
 
-;; TODO move this to a proper thread-local construct; probably var
+;; TODO move this to a properly managed construct; either ThreadLocal or hung off of state in the form of an atom holding a map
 (def repository (atom nil))
 
 (defn -greet
-  [ x]
+  [_]
   (str "This is a greeting " @repository))
 
 (defn -setPlayerRepository
